@@ -1,0 +1,173 @@
+/* style.css */
+
+header {
+    background-color: #007bff;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+header a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+header a:hover {
+    background-color: #004692;
+    cursor: pointer;
+    transition: ease-in;
+    transition-duration: 300ms;
+}
+
+button#details {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button#details:hover {
+    padding: 10px 20px;
+    background-color: #0b3868;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: ease-in;
+    transition-duration: 300ms;
+}
+
+div#details {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+
+/* Reset default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li, input {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: Arial, sans-serif;
+}
+
+/* General table styling */
+table {
+    border-collapse: collapse; /* Removes extra spacing between cells */
+    width: 100%; /* Ensures table takes full width of its container */
+    margin: 20px auto; /* Centers the table on the page */
+    font-family: sans-serif; /* Sets a clean font style */
+    border: 1px solid #ddd; /* Thin border around the table */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    overflow-y: scroll;
+}
+  
+th, td {
+    padding: 10px; /* Adds spacing around cell content */
+    text-align: left; /* Aligns text to the left */
+    border: 1px solid #ddd; /* Separates cells with a thin border */
+}
+  
+th {
+    background-color: #f2f2f2; /* Lighter background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+  
+/* Hover effects */
+tr:hover {
+    background-color: #e5f3ff; /* Light blue background on hover */
+}
+  
+  /* Rounded corners */
+table, th, td {
+    border-radius: 5px; /* Softer corners */
+}
+
+#home_labels {
+    margin: 5px;
+}
+
+#cases {
+    height: 50%;
+    padding: 10px;
+}
+
+#reports {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#report, #report form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+div#report button {
+    display: block;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+div#report input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    align-self:flex-start;
+    font-size: 16px;
+}
+
+div#report hr {
+    width: 100%;
+}
+
+div#report textarea {
+    padding: 12px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: auto;
+    align-self: first baseline;
+}
+
+div#report label {
+    padding-top: 2.5px;
+    color: #333;
+    align-self:flex-start;
+    padding-left: 10px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+}
+
+  
+  

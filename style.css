@@ -1,0 +1,212 @@
+/* style.css */
+
+header {
+    background-color: #007bff;
+    overflow: hidden;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+header a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+header a:hover {
+    background-color: #004692;
+    cursor: pointer;
+    transition: ease-in;
+    transition-duration: 300ms;
+}
+
+/* Reset default browser styles */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: Arial, sans-serif;
+}
+  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+.chat-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+  
+#chat-box {
+    height: 475px;
+    overflow-y: scroll;
+    padding: 10px;
+    background-color: #f4f4f4;
+    margin: auto;
+}
+  
+#bot-message {
+    margin: 10px;
+    border: 1px solid darkmagenta;
+    padding: 10px;
+    border-radius: 5px;
+    background-color:deepskyblue;
+    width: fit-content;
+}
+
+#bot-message ul {
+    margin: -2px;
+}
+
+#bot-message li {
+    padding: 5px;
+}
+
+#bot-message form {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+}
+
+#bot-message form button {
+    display: block;
+    margin: 5;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#bot-message form input {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#bot-message form textarea {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    height: auto;
+}
+
+#bot-message form label {
+    display: block;
+    padding-top: 2.5px;
+    color: #333;
+    padding-left: 10px;
+}
+
+#user-message {
+    margin: 10px;
+    border: 1px solid darkmagenta;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+#user-input {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+  
+#user-message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+  
+#send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#send-button:hover {
+    padding: 10px 20px;
+    background-color: #0b3868;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: ease-in;
+    transition-duration: 300ms;
+}
+
+/* General table styling */
+table {
+    border-collapse: collapse; /* Removes extra spacing between cells */
+    width: 100%; /* Ensures table takes full width of its container */
+    margin: 20px auto; /* Centers the table on the page */
+    font-family: sans-serif; /* Sets a clean font style */
+    border: 2px solid #ddd; /* Thin border around the table */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    overflow-y: scroll;
+    max-height: 50%;
+}
+  
+th, td {
+    padding: 10px; /* Adds spacing around cell content */
+    text-align: left; /* Aligns text to the left */
+    border: 1px solid #ddd; /* Separates cells with a thin border */
+}
+  
+th {
+    background-color: #f2f2f2; /* Lighter background for headers */
+    font-weight: bold; /* Bold text for headers */
+}
+  
+/* Hover effects */
+tr:hover {
+    background-color: #e5f3ff; /* Light blue background on hover */
+}
+  
+  /* Rounded corners */
+table, th, td {
+    border-radius: 5px; /* Softer corners */
+}
+  
+#cases {
+    height: 50%;
+    padding: 10px;
+}
+
+#cases p {
+    padding: 10px;
+}
+
+  
+  
