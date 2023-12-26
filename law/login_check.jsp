@@ -1,6 +1,12 @@
+<!-- 
+    Purpose: The username and password entered by the user in "login.jsp" page are checked here, making
+    sure that the username and password matches with the one stored in database. Then, the session 
+    variables are set for the officer, for further processing. The officerr, after successful login, is 
+    redirected to the "home.jsp" page
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*" %>
-<%@ page import="java.security.*"%>
+<%@ page import="java.sql.*" %> <!-- Java DataBase Connectivity, for MySQL database access -->
+<%@ page import="java.security.*"%> <!-- Java security libraries, for hashing the passowrd -->
 
 <head>
     <link rel="stylesheet" type="text/css" href="signup-login.css">

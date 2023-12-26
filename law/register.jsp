@@ -1,6 +1,10 @@
+<!-- 
+    Purpose: This file obtains the details, filled by the user, in the "signup.jsp" page, and 
+    then enters them into the database 
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*" %>
-<%@ page import="java.security.*"%>
+<%@ page import="java.sql.*" %> <!-- Java DataBase Connectivity, for MySQL database access -->
+<%@ page import="java.security.*"%>  <!-- Java security libraries, for hashing the passowrd -->
 <head>
     <link rel="stylesheet" type="text/css" href="signup-login.css">
 </head>

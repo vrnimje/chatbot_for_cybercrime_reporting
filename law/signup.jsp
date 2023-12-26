@@ -1,9 +1,15 @@
+<!-- 
+    Purpose: For officers to Sign Up and Register an account with the website. The user will 
+    enter their details like Username, EMail-ID, Law Enforcement division and the Password for the
+    account. After that, the details will be used to create an account in the database, which are 
+    processed in the file "register.jsp" 
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
+    <title>LE - Sign Up</title>
     <link rel="stylesheet" type="text/css" href="signup-login.css">
 </head>
 <body>

@@ -1,5 +1,9 @@
+<!-- 
+    Purpose: In this page, the Web server report, Application server report and the Database server report, pertaining to 
+    the Case ID entered in the "status.jsp" page. All the reports are displayed in a tabular format.  
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*" %>
+<%@ page import="java.sql.*" %> <!-- Java DataBase Connectivity, for MySQL database access -->
 <head>
     <meta charset="UTF-8">
     <title>Reports for Case no. <%=request.getParameter("case_id")%></title>
@@ -8,6 +12,7 @@
 
 <body>
 <%
+// If user is not logged in, redirect them to Login page
 if (session.getAttribute("username") == null) {
     response.sendRedirect("login.jsp");
 }
@@ -21,9 +26,12 @@ else {
 </header>
 <%  
     try {
+    // Retrieve the user session variables 
     String username = (String)session.getAttribute("username");
     int user_id = (int)session.getAttribute("id");
+    // Retrieve case for which the reports are to be displayed
     int case_id = Integer.parseInt(request.getParameter("case_id"));
+    // Init
     Connection conn = null;
     PreparedStatement stmt = null;
     ResultSet rs = null;
@@ -49,13 +57,14 @@ else {
     <div id="cases">
     <h2>Case ID: <%=case_id%></h2>
     <p>
+        <!-- Overview of complaint filed by user, and name of the law officer that created the reports -->
         Case reports prepared by: <%=rs.getString("law_name")%> (email: <%=rs.getString("law_email")%>), <%=rs.getString("law_division")%> <br>
         Category: <%=rs.getString("category")%> <br>
         Description: <%=rs.getString("description")%> <br>
     </p>
     
     <%
-
+    // Retrieve the web server report pertaining to the complaint
     sql = "SELECT * from web_server_reports WHERE compl_id = ?";
     stmt = conn.prepareStatement(sql);
     stmt.setInt(1, case_id);
@@ -63,6 +72,7 @@ else {
 
     rs.next();
     %>
+    <!-- Display the Web server report in tabular details -->
     <h2>Web Server Report</h2>
     <hr>
     <table>
@@ -84,13 +94,14 @@ else {
     </table>
 
     <%
+    // Retrieve the Application server report pertaining to the complaint
     sql = "SELECT * from appln_server_reports WHERE compl_id = ?";
     stmt = conn.prepareStatement(sql);
     stmt.setInt(1, case_id);
     rs = stmt.executeQuery();
     rs.next();
     %>
-
+    <!-- Display the Application server report in tabular details -->
     <h2>Application Server Report</h2>
     <hr>
     <table>
@@ -114,13 +125,14 @@ else {
     </table>
     
     <%
+    // Retrieve the Database server report pertaining to the complaint
     sql = "SELECT * from db_server_reports WHERE compl_id = ?";
     stmt = conn.prepareStatement(sql);
     stmt.setInt(1, case_id);
     rs = stmt.executeQuery();
     rs.next();
     %>
-
+    <!-- Display the Database server report in tabular details -->
     <h2>Database Server Report</h2>
     <hr>
     <table>
@@ -133,7 +145,7 @@ else {
             <th>Additonal Description</th>
         </tr>
     </div>
-
+    
     <tr>
         <td><%=rs.getString("id")%></td>
         <td><%=rs.getString("injected_hostile_data")%></td>

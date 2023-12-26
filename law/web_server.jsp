@@ -1,5 +1,8 @@
+<!-- 
+    Purpose: In this file, the web server report is stored in the database.
+-->
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*" %>
+<%@ page import="java.sql.*" %> <!-- Java DataBase Connectivity, for MySQL database access -->
 
 <%
 if (session.getAttribute("username") == null) {
